@@ -104,8 +104,14 @@
 		 
   };
 
+// left menu html
+// 					<li id='todo'><a class="icon icon-shop" href="#">todo</a></li>
+// 					<li id='review'><a class="icon icon-cloud" href="#">review</a></li>
+// 					<li id='ok'><a class="icon icon-diamond" href="#">ok</a></li>
+// 					<li id='zh'><a class="icon icon-photo" href="#">中文</a></li>
+// 					<li id='en'><a class="icon icon-wallet" href="#">英文</a></li>
+//					<li id='all'><a class="icon icon-shop" href="#">show all</a></li>
 
-	
   // Static method default options.
   $.transtool.options = {
 		debug: false,
@@ -130,14 +136,6 @@
 		]
   };
 	
-	// $.fn.toolbar.options = {
-	//       content: '#myContent',
-	//       position: 'top',
-	//       hideOnClick: false,
-	//       zIndex: 120
-	//   };
-	//
-
 	/**
 	 * 日志方法
 	 */

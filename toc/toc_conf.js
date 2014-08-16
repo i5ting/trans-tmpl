@@ -14,7 +14,38 @@ var jquery_ztree_toc_opts = {
 				'height': $(window).height() + 'px'
     }
 }
+
 var markdown_panel_style = {
     'width':'70%',
     'margin-left':'25%'
 };
+
+var transtool_opts = {
+		toolbarselector:"#mp-menu",
+		default_state:'all',
+    states:[
+        {
+						'all':{
+              'icon':'icon-shop',
+							'display':"全部",
+              click:function(){
+                  alert('zh111');
+              }
+						},
+            'todo':{
+                'icon':'icon-world',
+								'display':"中文",
+                click:function(){
+                    alert('zh111');
+                }
+            },
+            'review':{
+                'icon':'icon-cloud',
+								'display':"英文",
+                click:function(){
+                    alert('en');
+                }
+            }
+        }
+    ]
+}
