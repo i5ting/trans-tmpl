@@ -32,14 +32,14 @@ var transtool_opts = {
                   alert('zh111');
               }
 						},
-            'todo':{
+            'zh':{
                 'icon':'icon-world',
 								'display':"中文",
                 click:function(){
                     alert('zh111');
                 }
             },
-            'review':{
+            'en':{
                 'icon':'icon-cloud',
 								'display':"英文",
                 click:function(){
