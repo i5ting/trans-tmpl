@@ -76,7 +76,16 @@
 	 */ 
 	function init_with_default_state(opts){
 		var key = opts.default_state;
-		show_preview_info_wity_type(opts, key);
+		if(key === 'all'){
+			$.each(opts.states,function(){
+				$.each(this,function(key,value){
+						$('.' + key).show();
+				});
+			});
+			$('#normal-button').trigger('click');
+		}else{
+			show_preview_info_wity_type(opts, key);
+		}
 	}
 
   // Static method.
