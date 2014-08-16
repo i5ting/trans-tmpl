@@ -1,6 +1,14 @@
 # Demo
 
-open demo.html
+
+## run example
+
+	open demo.html
+
+## historys
 
 
-- 增加default state = all的选项。
+- v0.1.0
+	- 增加default state = all的选项。
+	
+
