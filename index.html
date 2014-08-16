@@ -16,16 +16,16 @@
         
 
           .settings-button {
-          	width: 36px;
+          	/*width: 36px;
           	height: 28px;
           	border-radius: 5px;
           	border: 1px solid #161615;
           	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .26), 0px 1px 0px 0px rgba(255, 255, 255, .15);
-          	opacity: 0.7;
-          	background-color: #343433;
+          	background-color: #343433;*/
+						opacity: 0.7;
           	z-index: 2;
           	display: block;
-          	margin: 20px 44px;
+          	margin: 20px 20px;
             position:fixed;
             bottom:0px;
           }
@@ -112,13 +112,6 @@
     					<div class="mp-level">
     						<h2 class="icon icon-world" style='font-size: 34;color:white;'>泰然译品</h2>
     						<ul>
-									<li id='all'><a class="icon icon-world" href="#">show all</a></li>
-    							<li id='todo'><a class="icon icon-shop" href="#">todo</a></li>
-									<li id='review'><a class="icon icon-cloud" href="#">review</a></li>
-									<li id='ok'><a class="icon icon-diamond" href="#">ok</a></li>
-    							<li id='zh'><a class="icon icon-photo" href="#">中文</a></li>
-    							<li id='en'><a class="icon icon-wallet" href="#">英文</a></li>
-									<li id='tree_show'><a class="icon icon-wallet" href="#">tree show</a></li>
     						</ul>
 							
     					</div>
@@ -412,12 +405,12 @@ Suspendisse id sem consectetuer libero luctus adipiscing.</li>
 			<script type="text/javascript" src="toc/js/jquery.js"></script>
 			<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
 			<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
-      <script type="text/javascript" src="toc/js/jquery.transtool.min.js"></script>
       <script type="text/javascript" src="toc/toc_conf.js"></script>
   		<script src="toc/js/classie.js"></script>
   		<script src="toc/js/mlpushmenu.js"></script>
   		<script src="toc/js/modernizr.custom.js"></script>
-      
+      <script src="toc/js/jquery.transtool.js"></script>
+			
 			<SCRIPT type="text/javascript" >
 			<!--
 			$(document).ready(function(){
@@ -431,43 +424,43 @@ Suspendisse id sem consectetuer libero luctus adipiscing.</li>
     				type : 'cover'
     			} );
           
-					
-//				  <li id='todo'><a class="icon icon-shop" href="#">todo</a></li>
+			 
+
+					// <li id='todo'><a class="icon icon-shop" href="#">todo</a></li>
 // 					<li id='review'><a class="icon icon-cloud" href="#">review</a></li>
 // 					<li id='ok'><a class="icon icon-diamond" href="#">ok</a></li>
 // 					<li id='zh'><a class="icon icon-photo" href="#">中文</a></li>
 // 					<li id='en'><a class="icon icon-wallet" href="#">英文</a></li>
-// 					<li id='tree_show'><a class="icon icon-wallet" href="#">tree show</a></li>
-					
-					var all_type = ['todo','review','ok','zh','en'];
-					
-					//init nav menu event
-					$.each(all_type ,function(){
-						var $this = this;
-							$('#' + $this).click(function(){
-								show_preview_info_wity_type($this);
-							});
+//<li id='all'><a class="icon icon-shop" href="#">show all</a></li>
+					$.transtool({
+							toolbarselector:"#mp-menu",
+							default_state:'todo',
+	            states:[
+	                {
+											'all':{
+                        'icon':'icon-shop',
+												'display':"全部",
+                        click:function(){
+                            alert('zh111');
+                        }
+											},
+	                    'todo':{
+	                        'icon':'icon-world',
+													'display':"中文",
+	                        click:function(){
+	                            alert('zh111');
+	                        }
+	                    },
+	                    'review':{
+	                        'icon':'icon-cloud',
+													'display':"英文",
+	                        click:function(){
+	                            alert('en');
+	                        }
+	                    }
+	                }
+	            ]
 					});
-					
-					$('#all').click(function(){
-						$.each(all_type ,function(){
-								$('.' + this).show();
-						});
-						
-						$('#normal-button').trigger('click');
-					});
-					
-					function show_preview_info_wity_type(type){
-						$.each(all_type ,function(){
-								$('.' + this).hide();
-						});
-						
-						$('.' + type).show();
-						
-						$('#normal-button').trigger('click');
-					}
-					
-					
 					
 					// $('#tree').hide()
 				
