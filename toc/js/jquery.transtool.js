@@ -68,7 +68,7 @@
 		
 		$('.' + type).show();
 
-		$('#normal-button').trigger('click');
+		$(opts.menu_trigger_selector).trigger('click');
 	}
 	
 	/**
@@ -82,7 +82,7 @@
 						$('.' + key).show();
 				});
 			});
-			$('#normal-button').trigger('click');
+			$(opts.menu_trigger_selector).trigger('click');
 		}else{
 			show_preview_info_wity_type(opts, key);
 		}
@@ -110,6 +110,7 @@
   $.transtool.options = {
 		debug: false,
 		toolbarselector: "#user-toolbar",
+		menu_trigger_selector:'#normal-button',
     punctuation: '.',
 		states:[
 			{
