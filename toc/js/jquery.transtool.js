@@ -51,7 +51,7 @@
 				});
 			});
 			
-			$('#normal-button').trigger('click');
+			//$('#normal-button').trigger('click');
 		});	
 	}
 	

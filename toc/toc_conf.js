@@ -3,7 +3,7 @@ var jquery_ztree_toc_opts = {
     is_auto_number:true,
     documment_selector:'.markdown-body',
     ztreeStyle: {
-        width:'320px',
+        width:'323px',
         overflow: 'auto',
         position: 'fixed',
         'z-index': 1,
