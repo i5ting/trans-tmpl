@@ -133,13 +133,15 @@ function factor(opts ,count,current) {
 	 */	
 	function bind_scroll_event_and_update_postion(opts) {
 		var timeout;
-	    var highlight_on_scroll = function(e) {
+	  var highlight_on_scroll = function(e) {
+			console.log('highlight_on_scroll ing....');
+			
 			if (timeout) {
 				clearTimeout(timeout);
 			}
 			
 			timeout = setTimeout(function() {
-				var top = $(window).scrollTop(),highlighted;
+				var top = $('.scroller').scrollTop(),highlighted;
 				
 				if(opts.debug) console.log('top='+top);
 			
@@ -150,17 +152,19 @@ function factor(opts ,count,current) {
 						$('a').removeClass('curSelectedNode');
 						
 						// 由于有root节点，所以i应该从1开始
-				  		var obj = $('#tree_' + (i+1) + '_a').addClass('curSelectedNode');
+				  	var obj = $('#tree_' + (i+1) + '_a').addClass('curSelectedNode');
 						break;
+					}else{
+						console.log('IIIIIIIIII opts._header_offsets['+ i +'] = '+opts._header_offsets[i]);
 					}
 				}
 			}, opts.refresh_scroll_time);
 		};
 		
-	    if (opts.highlight_on_scroll) {
-	      $(window).bind('scroll', highlight_on_scroll);
-	      highlight_on_scroll();
-	    }
+    if (opts.highlight_on_scroll) {
+      $('.scroller').on('scroll', highlight_on_scroll);
+      highlight_on_scroll();
+    }
 	}
 	
 	/*

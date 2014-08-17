@@ -1,6 +1,7 @@
 var jquery_ztree_toc_opts = {
     debug:false,
     is_auto_number:true,
+		highlight_on_scroll:true,
     documment_selector:'.markdown-body',
     ztreeStyle: {
         width:'320px',
