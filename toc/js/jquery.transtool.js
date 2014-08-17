@@ -18,7 +18,7 @@
 		
 		$.each(opts.states,function(){
 			$.each(this,function(key,value){
-					optsion_html += "<li id='" + key + "'><a class='icon "+ value.icon +"' href='#'>" + value.display  + "</a></li>";
+					optsion_html += "<li id='" + key + "'><a class='icon "+ value.icon +"' href='#1'>" + value.display  + "</a></li>";
 					$('#'+key).on('click',value.click);
 			});
 			
