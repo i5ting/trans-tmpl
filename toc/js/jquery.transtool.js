@@ -37,7 +37,7 @@
 			$.each(this,function(key,value){
 					//$('#'+key).on('click',value.click);
 					var $this = this;
-					$('#' + key).click(function(){
+					$('#' + key).on('click',function(){
 						show_preview_info_wity_type(opts, key);
 					});
 			});
