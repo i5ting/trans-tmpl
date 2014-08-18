@@ -23,7 +23,16 @@
 		
 		$.each(opts.states,function(){
 			$.each(this,function(key,value){
-					optsion_html += "<li id='" + key + "'><a class='icon "+ value.icon +"' href='#1'>" + value.display  + "</a></li>";
+					if(value.href){
+						if(!value.target){
+							value.target = '_blank';
+						}
+						
+						optsion_html += "<li id='" + key + "'><a class='icon "+ value.icon +"' href='" + value.href + "' target='" + value.target+ "'>" + value.display  + "</a></li>";
+					}else{
+						optsion_html += "<li id='" + key + "'><a class='icon "+ value.icon +"' href='#1'>" + value.display  + "</a></li>";
+					}
+					
 					$('#'+key).on('click',value.click);
 			});
 			
@@ -128,6 +137,8 @@
 			{
 				'zh':{
 					'icon':'icon-edit',
+					'href':'http://baidu.com',
+					'target':'_self',
 					click:function(){
 						alert('zh');
 					}

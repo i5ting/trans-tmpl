@@ -36,11 +36,13 @@ var transtool_opts = {
               }
 						},
             'zh':{
-                'icon':'icon-world',
-								'display':"中文",
-                click:function(){
-                    alert('zh111');
-                }
+							'icon':'icon-edit',
+							'href':'http://baidu.com',
+							'target':'_blank',
+							'display':"中文",
+               click:function(){
+                   alert('zh111');
+               }
             },
             'en':{
                 'icon':'icon-cloud',
