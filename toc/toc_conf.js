@@ -24,6 +24,7 @@ var markdown_panel_style = {
 
 var transtool_opts = {
 		toolbarselector:"#mp-menu",
+		mp_title:"技术文档",
 		default_state:'all',
     states:[
         {

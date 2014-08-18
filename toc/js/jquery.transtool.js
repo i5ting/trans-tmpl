@@ -13,6 +13,10 @@
 	 */ 
 	function create_tip_opts(opts){
 		
+		if(opts.mp_title && opts.mp_title.length > 0){
+			$('#mp_title').html(opts.mp_title);
+		}
+		
 		// <li id='all'><a class="icon icon-world" href="#">show all</a></li>
 		var optsion_html = "";
 		
@@ -115,6 +119,7 @@
   // Static method default options.
   $.transtool.options = {
 		debug: false,
+		mp_title:"请配置mp_title",
 		toolbarselector: "#user-toolbar",
 		menu_trigger_selector:'#normal-button',
     punctuation: '.',
