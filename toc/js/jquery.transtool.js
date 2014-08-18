@@ -15,6 +15,7 @@
 		
 		if(opts.mp_title && opts.mp_title.length > 0){
 			$('#mp_title').html(opts.mp_title);
+			$('title').html(opts.mp_title);
 		}
 		
 		// <li id='all'><a class="icon icon-world" href="#">show all</a></li>
