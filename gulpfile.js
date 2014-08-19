@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var concat  = require('gulp-concat');
+var minify_css = require('gulp-minify-css');
 
 require('shelljs/global');
 
@@ -18,4 +19,9 @@ gulp.task('default', function() {
 	cp('-R', 'lib/*', 'toc/lib/');
 });
 
-
+gulp.task('css', function() {
+  gulp.src('./toc/css/*.css')
+    .pipe(minify_css({keepBreaks:false}))
+		.pipe(concat('trans.min.css'))
+    .pipe(gulp.dest('./dist/css'))
+});
