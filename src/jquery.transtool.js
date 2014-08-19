@@ -102,12 +102,31 @@
 			show_preview_info_wity_type(opts, key);
 		}
 	}
+	
+	/**
+	 * 确定是否显示pushmenu
+	 */ 
+	function show_push_menu(opts){
+		if(opts.menu_container_selector && opts.menu_trigger_selector){
+			var c = document.getElementById( opts.menu_container_selector.replace('#','') );
+			var t = document.getElementById( opts.menu_trigger_selector.replace('#','') );
+			
+			new mlPushMenu( c, t , {
+				type : 'cover'
+			} );
+		}else{
+			return
+		}
+	}
 
   // Static method.
   $.transtool = function(options) {
     // Override default options with passed-in options.
     var opts = $.extend({}, $.transtool.options, options);
     
+		// show or hide push_menu
+		show_push_menu(opts);
+		
 		// 创建tooltip‘s options html
 		create_tip_opts(opts);
 		
@@ -132,6 +151,7 @@
 		debug: false,
 		mp_title:"请配置mp_title",
 		toolbarselector: "#user-toolbar",
+		menu_container_selector:'#mp-menu',
 		menu_trigger_selector:'#normal-button',
     punctuation: '.',
 		states:[

@@ -67,10 +67,7 @@ $(document).ready(function(){
     var conf = eval(jquery_ztree_toc_opts);
 		$('#tree').ztree_toc(conf);
     
-		new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'normal-button' ), {
-			type : 'cover'
-		} );
-   
+	
 		var transtool_opts_conf = eval(transtool_opts);
 		$.transtool(transtool_opts_conf);
 		
