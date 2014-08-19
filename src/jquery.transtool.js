@@ -52,6 +52,7 @@
 					//$('#'+key).on('click',value.click);
 					var $this = this;
 					$('#' + key).on('click',function(){
+						console.log(key + '--click');
 						show_preview_info_wity_type(opts, key);
 					});
 			});
