@@ -54,3 +54,25 @@ var transtool_opts = {
         }
     ]
 }
+
+
+
+/**
+ * main方法
+ */ 
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+    
+		new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'normal-button' ), {
+			type : 'cover'
+		} );
+   
+		var transtool_opts_conf = eval(transtool_opts);
+		$.transtool(transtool_opts_conf);
+		
+		// $('#tree').hide()
+});
