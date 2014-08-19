@@ -26,6 +26,8 @@ var transtool_opts = {
 		toolbarselector:"#mp-menu",
 		mp_title:"技术文档",
 		default_state:'all',
+		menu_container_selector:'#mp-menu',
+		menu_trigger_selector:'#normal-button',
     states:[
         {
 						'all':{
