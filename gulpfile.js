@@ -16,12 +16,14 @@ gulp.task('default', function() {
 		.pipe(concat('trans.min.js'))
 		.pipe(gulp.dest('toc/js'));
 		
-	cp('-R', 'lib/*', 'toc/lib/');
+	cp('-Rf', 'lib/*', 'toc/lib/');
 });
 
 gulp.task('css', function() {
   gulp.src('./toc/css/*.css')
     .pipe(minify_css({keepBreaks:false}))
 		.pipe(concat('trans.min.css'))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('toc/css'));
+		
+	cp('-Rf', 'css/zTreeStyle', 'toc/css/');
 });
