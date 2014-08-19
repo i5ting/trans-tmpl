@@ -29,4 +29,10 @@
 - v0.1.0
 	- 增加default state = all的选项。
 	
+## 欢迎fork和反馈
 
+在issue提问或邮件shiren1118@126.com
+
+## License
+
+this gem is released under the [MIT License](http://www.opensource.org/licenses/MIT)
