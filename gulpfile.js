@@ -20,7 +20,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('css', function() {
-  gulp.src('./toc/css/*.css')
+  gulp.src('css/*.css')
     .pipe(minify_css({keepBreaks:false}))
 		.pipe(concat('trans.min.css'))
     .pipe(gulp.dest('toc/css'));
