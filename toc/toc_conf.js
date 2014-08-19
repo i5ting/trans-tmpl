@@ -38,7 +38,7 @@ var transtool_opts = {
               }
 						},
             'zh':{
-							'icon':'icon-edit',
+							'icon':'icon-world',
 							'href':'http://baidu.com',
 							'target':'_blank',
 							'display':"中文",
