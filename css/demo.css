@@ -3,8 +3,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body {color: #2f332a;font: 15px/21px Arial, Helvetica, simsun, sans-serif;background: #f0f6e4 \9;}
 h1, h2, h3, h4, h5, h6 {color: #2f332a;font-weight: bold;font-family: Helvetica, Arial, sans-serif;padding-bottom: 5px;}
 
-a {color:#3C6E31;text-decoration: underline;}
-a:hover {background-color:#3C6E31;color:white;}
 input.radio {margin: 0 2px 0 8px;}
 input.radio.first {margin-left:0;}
 input.empty {color: lightgray;}
@@ -50,16 +48,6 @@ div.ruler div.cursor {height:20px; width:30px; background-color:#3C6E31; color:w
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 }*/
 
-a {
-	text-decoration: none;
-	color: #f7f7f7;
-	outline: none;
-}
-
-a:hover, a:focus {
-	color: #fff;
-	outline: none;
-}
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
