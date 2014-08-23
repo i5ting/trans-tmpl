@@ -218,7 +218,15 @@ html, body, .container, .scroller {
 	font-size: 1.4em;
 	-webkit-transition: background 0.3s, box-shadow 0.3s;
 	-moz-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, box-shadow 0.3s;	
+	text-decoration: none;
+	color: #f7f7f7;
+	outline: none;
+}
+
+.mp-menu ul li > a:hover, .mp-menu ul li > a:focus {
+	color: #fff;
+	outline: none;
 }
 
 .mp-menu ul li::before {
